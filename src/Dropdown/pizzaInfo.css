@@ -1,0 +1,88 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    overflow: hidden;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: 'Spoqa Han Sans Neo', 'sans-serif';
+    width: 100%;
+    height: 100vh;
+}
+
+@keyframes slideImg{
+    0%{
+        transform: translateX(-100%);
+    }
+    100%{
+        transform: translateX(0%);
+    }
+}
+
+.pizza-img{
+    width: 45vw;
+    height: 100vh;
+    background-color: rgb(255, 60, 0);
+    animation: slideImg 1s;
+    -webkit-animation: slideImg 1s;
+    display: flex;
+    box-shadow: 7px 0px 13px 1px #80808066;
+}
+
+.pizza-img img{
+    align-self: center;
+    width: 100%;
+    margin: 0 auto;
+}
+
+@keyframes slideInfo{
+    0%{
+        transform: translateX(100%);
+    }
+    100%{
+        transform: translateX(0%);
+    }
+}
+
+.pizza-info{
+    margin: 40px;
+    /* width: 44vw; */
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    animation: slideInfo 1s;
+    -webkit-animation: slideInfo 1s;
+}
+
+.pizza-info h1{
+    color: rgb(255, 60, 0);   
+}
+
+.pizza-info section{
+    width: 44vw;
+    padding: 10px 0;
+}
+
+.pizza-info section p{
+    line-height: 2em;
+}
+
+button {
+    width: 200px;
+    cursor: pointer;
+    border: none;
+    padding: 8px;
+    color: #3f4150;
+    background-color: #fff;
+    letter-spacing: -0.02em;
+    font-size: 14px;
+}
+
+.prev-button{
+    background-color: rgb(221, 221, 221);
+    color: white;
+}
