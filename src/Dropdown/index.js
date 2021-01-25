@@ -1,4 +1,3 @@
-
 const toggleButton = document.querySelector('.dropdown-toggle');
 const dropdownMenu = document.querySelector('.dropdown-menu');
 const nextButton = document.querySelector('.next-button');
@@ -20,14 +19,13 @@ toggleButton.addEventListener('blur', function () {
 const dropdownOptions = document.querySelectorAll('.dropdown-option');
 
 function selectOption(e) {
-    const buttonLabel = e.target.innerText;
+    const buttonLabel = e.target.textContent.trim();
     const selectPizza = e.target.value;
     const defaultImgSrc = "./assets"
 
     /* change selected option text */
-    toggleButton.innerText = buttonLabel;
+    toggleButton.textContent = buttonLabel;
     toggleButton.classList.add('selected');
-    
 
     /* change selected option img */
     switch (selectPizza) {
@@ -60,6 +58,10 @@ function selectOption(e) {
     pizzaImg.classList.add('changed');
     nextButton.removeAttribute('disabled');
 }
+
+// dropdownOptions.forEach(function (option) {
+//     option.addEventListener('click', selectOption);
+// })
 
 dropdownMenu.addEventListener('click', selectOption);
 
