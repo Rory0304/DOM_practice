@@ -12,9 +12,9 @@ function dropdownAction() {
 
 toggleButton.addEventListener('click', dropdownAction);
 
-toggleButton.addEventListener('blur', function () {
-    dropdownMenu.classList.remove('show');
-})
+// toggleButton.addEventListener('blur', function () {
+//     dropdownMenu.classList.remove('show');
+// })
 
 /* 옵션 선택할 때 텍스트 바뀌는 액션 */
 const dropdownOptions = document.querySelectorAll('.dropdown-option');
