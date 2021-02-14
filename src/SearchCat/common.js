@@ -21,7 +21,7 @@ export const inputView = {
 export const controller = {
     inputFieldEl: global.inputFieldEl,
     searchResultEl : global.searchResultEl,
-    debounceDelay: 500,
+    debounceDelay: 300,
     throttleDelay: 50
 }
 

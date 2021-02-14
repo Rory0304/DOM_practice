@@ -29,6 +29,7 @@ class Controller{
             return;
         }
         else {
+            clearTimeout(this.debounce);
             this.getSuggestions(e.target.value);
         }
     }
@@ -48,7 +49,6 @@ class Controller{
 
     /* get suggestions from input value */
     getSuggestions(query) {
-        clearTimeout(this.debounce);
         this.debounce = setTimeout(() => {
             this.keyword = query;
             this.suggestions = this.model.getAutoCompleteList(query);
